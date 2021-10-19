@@ -1,4 +1,4 @@
-package TD2;
+package TD2.fileSystem;
 
 public enum ComponentType {
     DIRECTORY, FILE
