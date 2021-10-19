@@ -1,0 +1,46 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+!include commons.style
+
+abstract class ComposantImp{
+- name
++this(in name :$, in O:Owner)
+getOwner():Owner {^Owner}
+getName():String {^name}
+}
+
+class File{
+-contenu :$
+}
+
+class Directory
+interface Composant
+{
+getName():String
+getOwner():Owner
+getSize(): int
+getContent ():String
+appendContent(in content : String):void
+setOwner(in owner:Owner)
+}
+
+class Owner{
+- name:String
++this(in n:String)
++equals()
++hashCode()
++toString()
+}
+
+ComposantImp <|-- "~this" File
+ComposantImp <|-- "~this" Directory
+
+Composant <|.. ComposantImp
+
+Directory *--> "-elems" Composant
+
+Owner <-- ComposantImp
+
+
+@enduml
