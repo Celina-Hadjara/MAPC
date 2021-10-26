@@ -17,5 +17,4 @@ public interface Component {
     void appendContent(List<String> content);
 
     boolean isComposite();
-
 }

@@ -21,7 +21,7 @@ public abstract class ComponentImpl implements Component {
     }
 
     @Override
-    public void setOwner(Owner owner, boolean recursive) {
+    public void setOwner(Owner owner, boolean recursive) throws NullPointerException {
         this.setOwner(owner, recursive);
     }
 

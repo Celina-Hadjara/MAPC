@@ -63,6 +63,8 @@ public class Directory extends ComponentImpl implements Component, Composite<Com
 
     @Override
     public String toString() {
-        return getContent().toString();
+        return "Directory{" +
+                "children=" + children +
+                '}';
     }
 }

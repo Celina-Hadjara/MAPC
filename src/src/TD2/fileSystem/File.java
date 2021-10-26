@@ -34,6 +34,8 @@ public final class File extends ComponentImpl implements Component {
 
     @Override
     public String toString() {
-        return this.content.toString();
+        return "File{" +
+                "content=" + content +
+                '}';
     }
 }
